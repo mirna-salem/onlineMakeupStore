@@ -1,0 +1,449 @@
+html{
+    box-sizing: border-box;
+    font-size: 74%;
+}
+body{
+    font: 1.6rem Helvetica;
+    height: 100vh;
+    margin: 0;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 1fr 3rem;
+    height: 100%;
+}
+.header{
+    grid-area: header;
+    background-color: white;    
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.main{
+    grid-area: main;
+    background-color: white;
+    border-top: 2px solid #d3d1d1;
+    padding: 40px;
+}
+.footer{
+    grid-area: footer;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+button {
+    cursor: pointer;
+}
+
+/* Products Page */
+#products {
+    display: none;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 50px 200px;
+}
+
+.productUL {
+    text-transform: uppercase;  
+    text-align: center;  
+    flex-basis: 27%;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+.productUL li {
+    list-style-type: none;
+    margin: 1rem;
+}
+.add-button{
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    padding: 10px 60px;
+    border: none;
+    transition-duration: 0.5s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.add-button:focus{
+    outline: none;
+}
+
+.add-button:hover {
+    background-color: rgb(219, 138, 199);
+    transition-duration: 300ms;
+
+}
+
+.add-button:active {
+  background-color: rgb(219, 138, 199);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.product-name{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #383838;
+}
+.product-brand{
+    font-size: 1rem;
+    color: #383838;
+    font-weight: 600;
+}
+.product-price{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color:#383838;
+}
+.product-image{
+    max-width: 40rem;
+    max-height: auto;
+}
+
+/* navigation bar */
+.nav_links li,button, .dropbtn, .carrot {
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    text-transform: uppercase;
+}
+.carrot{
+    padding-left: 8px;
+    font-size: 12px;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 10px 0px 0px;
+}
+
+.nav_links li button {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li button:hover, .dropbtn:hover {
+    transition: all 0.3s ease 0s;
+    color: rgb(219, 138, 199);
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+}
+
+.dropdown-content button:hover {background-color: #ddd;}
+  
+.dropdown:hover .dropdown-content {display: block;}
+  
+
+/* Cart */
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+#cartIcon {
+    font-size:20px;
+    padding: 0px 0px 0px 10px;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    padding: 10px 30px;
+    border: 0px;
+    margin: 40px auto 80px auto;
+    text-align: center;
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
+  
+.btn-purchase:hover {
+    background-color: rgb(219, 138, 199);
+    transition-duration: 300ms;
+
+}
+
+.btn-purchase:active {
+  background-color: rgb(219, 138, 199);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#cart-section {
+    display: none;
+    padding: 20px;
+}
+
+.section-header {
+    margin-bottom: 100px;
+}
+
+/* Homepage */
+.main > #homepage {
+    display: flex;
+    position: relative;
+    background: url('images/nickelina-noel-GecwRYaolBk-unsplash.jpg') 50% 0 no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.8;
+    text-align: center;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #555;
+    box-shadow: 0 0 5px 2px rgb(122, 121, 121);
+}
+
+
+#homepage-container{
+    margin: auto auto;
+    font-family: 'Ultra', serif;
+}
+
+#homepageTitle{
+    margin: auto auto;
+    letter-spacing: 2px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    padding: 10px;
+    color: white;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-shadow: 4px 6px 5px rgba(0,0,0,0.3);
+    font-weight: 8px;
+
+}
+.keyWord {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:  rgb(219, 48, 128);
+    font-size: 80px;
+    padding: 5px;
+}
+
+.shopNow {
+    background-color: rgb(223, 168, 18);
+    color: black;
+    padding: 14px 30px;
+    width: fit-content;
+    margin: auto auto;
+    box-shadow: 0 0 4px 1px rgb(141, 106, 8);
+    cursor: pointer;
+}
+
+/* Contact Page */
+
+#contact{
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    max-width: 350px;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    padding: 40px;
+    border-radius: 5px;
+  }
+  
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #332902;
+}
+
+#formContainer{
+    text-align: center;
+}
+#formContainer .input_field{
+    margin-bottom: 10px;
+}
+
+#formContainer .input_field, #formContainer textarea{
+  border: 1px solid #e0e0e0;
+  width: 90%;
+  padding: 10px;
+}
+
+#formContainer textarea{
+  resize: none;
+  height: 80px;
+}
+
+#contact #btn, #contact #btn:focus{
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#contact #btn:hover {
+    background-color: rgb(219, 138, 199);
+    transition-duration: 300ms;
+
+}
+
+#contact #btn:active {
+  background-color: rgb(219, 138, 199);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  border: none;
+}
+
+#contact #errorMessage{
+  margin-bottom: 20px;
+  background: #fe8b8e;
+  padding: 0px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.5s ease;
+}

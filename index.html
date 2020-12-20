@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Ultra" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">
+                <ul class="nav_links">
+                    <li><button id="home_nav">Home</button></li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Shop <span class="carrot">&#9660</span></button>
+                        <div class="dropdown-content">
+                            <button class="product_nav" id="lips">Lips</button>
+                            <button class="product_nav" id="eyes">eyes</button>
+                            <button class="product_nav" id="face">face</button>
+                        </div>
+                    </li>
+                    <li><button id='contact_nav'>Contact</button></li>
+                </ul>
+                <div class="nav_links">
+                    <li><button id='cart_nav'>Cart
+                        <i id="cartIcon" class="fa">&#xf07a;</i>
+                    </button></li>
+                    <li class="cart-total-price">$0.00</li>
+                </div>
+        </header>
+        <main class="main">
+            <!--Homepage-->
+            <div id="homepage"> 
+                <div id="homepage-container">
+                    <div id="homepageTitle"><span class="keyWord one">Beauty</span> and <span class="keyWord two">Makeup Products</span></div>
+                        <button class="product_nav shopNow" id="lips">Shop Now</button>
+                </div>
+            </div>
+
+            <!--Products-->
+            <div id="products"></div>
+
+            <!-- Contact-->
+            <div id='contact'>
+                <h2>Contact us</h2>
+                <div id="errorMessage"></div>
+                <form action="" id="formContainer" onsubmit = "return validate();">
+                    <input class="input_field" placeholder="Name" type="text" id="name" name="name"><br>
+                    <input class="input_field" placeholder="Email Address" type="text" id="email" name="email"><br>
+                    <input class="input_field" placeholder="Subject" type="text" id="subject" name="subject"><br>
+                    <textarea class="input_field" placeholder="Your Message" name="yourMessage" id="yourMessage" ></textarea><br><br>
+                    <input id="btn" type="submit" value="Submit">  
+                </form>
+            </div>
+            
+            <!--Cart-->
+            <div id="cart-section">
+                <h2 class="section-header">MY CART</h2>
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column">PRICE</span>
+                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                </div>
+                <div class="cart-items"></div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">$0.00</span>
+                </div>
+                <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+            </div>
+        </main>
+        <footer class="footer">
+            All right reserved.
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
